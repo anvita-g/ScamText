@@ -16,6 +16,8 @@
 		0B7B97472A8A9ACD00B92C24 /* ScamTextUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B97462A8A9ACD00B92C24 /* ScamTextUITestsLaunchTests.swift */; };
 		0B7B975A2A8AAC7F00B92C24 /* disclaimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B97592A8AAC7F00B92C24 /* disclaimer.swift */; };
 		0B7B975C2A8AACDE00B92C24 /* help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B975B2A8AACDE00B92C24 /* help.swift */; };
+		0B7B975E2A8AB5F800B92C24 /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B975D2A8AB5F800B92C24 /* Analysis.swift */; };
+		0B7B97602A8AB62F00B92C24 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B975F2A8AB62F00B92C24 /* Input.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0B7B97462A8A9ACD00B92C24 /* ScamTextUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamTextUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0B7B97592A8AAC7F00B92C24 /* disclaimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disclaimer.swift; sourceTree = "<group>"; };
 		0B7B975B2A8AACDE00B92C24 /* help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = help.swift; sourceTree = "<group>"; };
+		0B7B975D2A8AB5F800B92C24 /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
+		0B7B975F2A8AB62F00B92C24 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				0B7B972F2A8A9ACD00B92C24 /* Preview Content */,
 				0B7B97592A8AAC7F00B92C24 /* disclaimer.swift */,
 				0B7B975B2A8AACDE00B92C24 /* help.swift */,
+				0B7B975D2A8AB5F800B92C24 /* Analysis.swift */,
+				0B7B975F2A8AB62F00B92C24 /* Input.swift */,
 			);
 			path = ScamText;
 			sourceTree = "<group>";
@@ -265,10 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7B97602A8AB62F00B92C24 /* Input.swift in Sources */,
 				0B7B972B2A8A9ACC00B92C24 /* ContentView.swift in Sources */,
 				0B7B97292A8A9ACC00B92C24 /* ScamTextApp.swift in Sources */,
 				0B7B975C2A8AACDE00B92C24 /* help.swift in Sources */,
 				0B7B975A2A8AAC7F00B92C24 /* disclaimer.swift in Sources */,
+				0B7B975E2A8AB5F800B92C24 /* Analysis.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
