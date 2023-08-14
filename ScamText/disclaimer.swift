@@ -29,7 +29,7 @@ struct Disclaimer: View {
                     
                     
                     
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: Input()) {
                         Text("Accept")
                             .frame(width: 200, height: 50, alignment: .center)
                             .background(Color(red: 0.96, green: 0.83, blue:0.37))
