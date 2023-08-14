@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct Input: View {
+    @State var userInput: String = ""
     var body: some View {
         NavigationView {
             
@@ -13,11 +14,11 @@ struct Input: View {
                 
                 VStack {
                     
-                    Text("ScamText Disclaimer")
+                    Text("ScamText")
                         .font(.custom("Arial-Bold", size: 38))
                         .foregroundColor(.white)
                     
-                    Text("Our app provides analysis and information to best of its abilities but can not guarantee complete accuracy at all times. We advise you to use our app's analysis with caution and your own judgement. \n\nBy clicking below you  acknowledge and release us from any liabilty arising from the use of our app or its analysis.")
+                    TextField("Paste your suspicious text here.", text: $userInput)
                         .frame(width: 300, height: 270, alignment: .center)
                         .padding()
                         .background(Color.white)
@@ -29,8 +30,16 @@ struct Input: View {
                     
                     
                     
+                    NavigationLink(destination: Analysis()) {
+                        Text("Analyze Text")
+                            .frame(width: 200, height: 50, alignment: .center)
+                            .background(Color(red: 0.96, green: 0.83, blue:0.37))
+                            .foregroundColor(Color(red: 0.10, green: 0.39, blue: 0.49))
+                            .cornerRadius(30)
+                            .font(.custom("Arial-Bold", size: 30))
+                    }
                     NavigationLink(destination: ContentView()) {
-                        Text("Accept")
+                        Text("Go Back")
                             .frame(width: 200, height: 50, alignment: .center)
                             .background(Color(red: 0.96, green: 0.83, blue:0.37))
                             .foregroundColor(Color(red: 0.10, green: 0.39, blue: 0.49))
