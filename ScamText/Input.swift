@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Disclaimer: View {
+struct Input: View {
     var body: some View {
         NavigationView {
             
@@ -45,9 +45,9 @@ struct Disclaimer: View {
         }
     }
     
-    struct Disclaimer_Previews: PreviewProvider {
+    struct Input_Previews: PreviewProvider {
         static var previews: some View {
-            Disclaimer()
+            Input()
         }
     }
 }
