@@ -2,7 +2,7 @@ import SwiftUI
 
 struct Disclaimer: View {
     var body: some View {
-        NavigationView {
+        //NavigationView {
             
             ZStack {
                 
@@ -52,7 +52,7 @@ struct Disclaimer: View {
                 
                 .padding()
             }
-        }
+        //}
     }
     
     struct Disclaimer_Previews: PreviewProvider {

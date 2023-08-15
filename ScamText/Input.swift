@@ -3,7 +3,7 @@ import SwiftUI
 struct Input: View {
     @State var userInput: String = ""
     var body: some View {
-        NavigationView {
+        //NavigationView {
             
             ZStack {
                 
@@ -27,8 +27,6 @@ struct Input: View {
                         .font(.custom("Arial-Bold", size: 20))
                         .multilineTextAlignment(.center)
                         .padding(50)
-                    
-                    
                     
                     NavigationLink(destination: Analysis(userInput: $userInput)) {
                         Text("Analyze Text")
@@ -61,7 +59,7 @@ struct Input: View {
                 
                 .padding()
             }
-        }
+        //}
     }
     
     struct Input_Previews: PreviewProvider {

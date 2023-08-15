@@ -11,7 +11,7 @@ import SwiftUI
 
 struct Help: View {
     var body: some View {
-        NavigationView {
+        //NavigationView {
             
             ZStack {
                 
@@ -52,7 +52,7 @@ struct Help: View {
                 
                 .padding()
             }
-        }
+        //}
     }
     
     struct Help_Previews: PreviewProvider {
