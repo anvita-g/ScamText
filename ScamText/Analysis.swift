@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct Analysis: View {
+    @Binding var userInput: String
     var body: some View {
         NavigationView {
             
@@ -17,7 +18,7 @@ struct Analysis: View {
                         .font(.custom("Arial-Bold", size: 38))
                         .foregroundColor(.white)
                     
-                    Text("")
+                    Text("User Input: \(userInput)")
                         .frame(width: 300, height: 270, alignment: .center)
                         .padding()
                         .background(Color.white)
@@ -66,7 +67,7 @@ struct Analysis: View {
     
     struct Analysis_Previews: PreviewProvider {
         static var previews: some View {
-            Analysis()
+            Analysis(userInput: .constant("Default Text"))
         }
     }
 }
