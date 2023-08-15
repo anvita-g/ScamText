@@ -47,6 +47,16 @@ struct Input: View {
                             .font(.custom("Arial-Bold", size: 30))
                     }
                     
+                    Spacer()
+                    NavigationLink(destination: Help()) {
+                
+                        Text("?")
+                            .frame(width: 50, height: 50, alignment: .center)
+                            .background(Color(red: 0.96, green: 0.83, blue:0.37))
+                            .foregroundColor(Color(red: 0.10, green: 0.39, blue: 0.49))
+                            .cornerRadius(30)
+                            .font(.custom("Arial-Bold", size: 30))
+                    }
                 }
                 
                 .padding()
