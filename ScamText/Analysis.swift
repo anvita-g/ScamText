@@ -67,7 +67,7 @@ struct Analysis: View {
                 
                 
                 VStack {
-                    
+                    Spacer()
                     Text("ScamText Analysis")
                         .font(.custom("Arial-Bold", size: 38))
                         .foregroundColor(.white)

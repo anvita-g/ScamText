@@ -13,7 +13,7 @@ struct Input: View {
                 
                 
                 VStack {
-                    
+                    Spacer()
                     Text("ScamText")
                         .font(.custom("Arial-Bold", size: 38))
                         .foregroundColor(.white)
