@@ -12,7 +12,7 @@ struct OpenAIChoice: Decodable {
 }
 
 func generateText(using userInput: String, completionHandler: @escaping (Result<String, Error>) -> Void) {
-    let apiKey = "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"
+    let apiKey = "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"
     let endpoint = "https://api.openai.com/v1/engines/text-davinci-002/completions"
     
     let prompt = "Is this text message a scam? Give a short description why or why not. User Input: \(userInput)"
@@ -84,18 +84,17 @@ struct Analysis: View {
                     
                         .onAppear {
                 
-                            generateText(using: userInput) { result in
+                           generateText(using: userInput) { result in
                                 switch result {
                                 case .success(let text):
                                     generatedText = text
                                 case .failure(let error):
                                     print("Error:", error)
-                                    generatedText = "Error occurred"
+                                    generatedText = "Error Occurred"
                                 }
                             }
                         }
-                    
-                    
+                                        
                     
                     /*NavigationLink(destination: ContentView()) {
                         Text("Home")
