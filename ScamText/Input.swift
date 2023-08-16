@@ -18,7 +18,7 @@ struct Input: View {
                         .font(.custom("Arial-Bold", size: 38))
                         .foregroundColor(.white)
                     
-                    TextField("Paste your suspicious text here.", text: $userInput)
+                    TextField("Paste your suspicious text here.", text: $userInput, axis: .vertical)
                         .frame(width: 300, height: 270, alignment: .center)
                         .padding()
                         .background(Color.white)
