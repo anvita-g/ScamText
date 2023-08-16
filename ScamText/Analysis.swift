@@ -1,7 +1,61 @@
 import SwiftUI
+import Foundation
+import OpenAISwift
+import Combine
+
+struct OpenAIResponse: Decodable {
+    let choices: [OpenAIChoice]?
+}
+
+struct OpenAIChoice: Decodable {
+    let text: String?
+}
+
+func generateText(using userInput: String, completionHandler: @escaping (Result<String, Error>) -> Void) {
+    let apiKey = "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"
+    let endpoint = "https://api.openai.com/v1/engines/text-davinci-002/completions"
+    
+    let prompt = "Is this text message a scam? Give a short description why or why not. User Input: \(userInput)"
+
+    let parameters: [String: Any] = [
+        "prompt": prompt,
+        "max_tokens": 50
+    ]
+    
+    let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
+    
+    var request = URLRequest(url: URL(string: endpoint)!)
+    request.httpMethod = "POST"
+    request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.httpBody = jsonData
+    
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        if let error = error {
+            completionHandler(.failure(error))
+            return
+        }
+        
+        if let data = data {
+            if let responseString = String(data: data, encoding: .utf8) {
+                print("API Response:", responseString)
+            }
+            
+            if let decodedResponse = try? JSONDecoder().decode(OpenAIResponse.self, from: data),
+               let choices = decodedResponse.choices,
+               let generatedText = choices.first?.text {
+                completionHandler(.success(generatedText))
+            } else {
+                completionHandler(.failure(NSError(domain: "", code: 0, userInfo: nil)))
+            }
+
+        }
+    }.resume()
+}
 
 struct Analysis: View {
     @Binding var userInput: String
+    @State private var generatedText: String?
     var body: some View {
         //NavigationView {
             
@@ -18,7 +72,7 @@ struct Analysis: View {
                         .font(.custom("Arial-Bold", size: 38))
                         .foregroundColor(.white)
                     
-                    Text("User Input: \(userInput)")
+                    Text("Generated Text: \(generatedText ?? "")")
                         .frame(width: 300, height: 270, alignment: .center)
                         .padding()
                         .background(Color.white)
@@ -27,6 +81,19 @@ struct Analysis: View {
                         .font(.custom("Arial-Bold", size: 20))
                         .multilineTextAlignment(.center)
                         .padding(50)
+                    
+                        .onAppear {
+                
+                            generateText(using: userInput) { result in
+                                switch result {
+                                case .success(let text):
+                                    generatedText = text
+                                case .failure(let error):
+                                    print("Error:", error)
+                                    generatedText = "Error occurred"
+                                }
+                            }
+                        }
                     
                     
                     
