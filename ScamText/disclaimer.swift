@@ -54,7 +54,7 @@ struct Disclaimer: View {
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("")
-            .navigationBarHidden(true)        //}
+            .navigationBarHidden(true)       
     }
     
     struct Disclaimer_Previews: PreviewProvider {

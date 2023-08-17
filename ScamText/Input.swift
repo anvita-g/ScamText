@@ -53,7 +53,7 @@ struct Input: View {
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("")
-            .navigationBarHidden(true)        //}
+            .navigationBarHidden(true)       
     }
     
     struct Input_Previews: PreviewProvider {

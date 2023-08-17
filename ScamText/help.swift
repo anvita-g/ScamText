@@ -45,7 +45,7 @@ struct Help: View {
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("")
-            .navigationBarHidden(true)        //}
+            .navigationBarHidden(true)       
     }
     
     struct Help_Previews: PreviewProvider {

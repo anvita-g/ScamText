@@ -120,7 +120,7 @@ struct Analysis: View {
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("")
-            .navigationBarHidden(true)        //}
+            .navigationBarHidden(true)       
     }
     
     struct Analysis_Previews: PreviewProvider {
