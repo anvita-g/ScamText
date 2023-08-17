@@ -45,7 +45,11 @@ struct ContentView: View {
                 
                 .padding()
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
+        
     }
     
     struct ContentView_Previews: PreviewProvider {

@@ -52,7 +52,9 @@ struct Disclaimer: View {
                 
                 .padding()
             }
-        //}
+            .navigationBarBackButtonHidden(true)
+            .navigationTitle("")
+            .navigationBarHidden(true)        //}
     }
     
     struct Disclaimer_Previews: PreviewProvider {

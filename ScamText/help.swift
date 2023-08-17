@@ -31,19 +31,21 @@ struct Help: View {
                     
                     
 
-                    /*NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: Input()) {
                         Text("Go Back")
                             .frame(width: 200, height: 50, alignment: .center)
                             .background(Color(red: 0.96, green: 0.83, blue:0.37))
                             .foregroundColor(Color(red: 0.10, green: 0.39, blue: 0.49))
                             .cornerRadius(30)
                             .font(.custom("Arial-Bold", size: 30))
-                    }*/
+                    }
                 }
                 
                 .padding()
             }
-        //}
+            .navigationBarBackButtonHidden(true)
+            .navigationTitle("")
+            .navigationBarHidden(true)        //}
     }
     
     struct Help_Previews: PreviewProvider {
