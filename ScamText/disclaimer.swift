@@ -12,6 +12,8 @@ struct Disclaimer: View {
                 
                 
                 VStack {
+
+                    Spacer()
                     
                     Text("ScamText Disclaimer")
                         .font(.custom("Arial-Bold", size: 38))
