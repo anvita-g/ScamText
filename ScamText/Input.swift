@@ -37,6 +37,8 @@ struct Input: View {
                             .font(.custom("Arial-Bold", size: 30))
                     }
                     
+                    
+                    
                     Spacer()
                     NavigationLink(destination: Help()) {
                 

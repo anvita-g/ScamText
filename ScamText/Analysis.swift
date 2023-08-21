@@ -2,6 +2,7 @@ import SwiftUI
 import Foundation
 import OpenAISwift
 import Combine
+import keyfile
 
 struct OpenAIResponse: Decodable {
     let choices: [OpenAIChoice]?
@@ -12,7 +13,9 @@ struct OpenAIChoice: Decodable {
 }
 
 func generateText(using userInput: String, completionHandler: @escaping (Result<String, Error>) -> Void) {
-    let apiKey = "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"
+    
+    let apiKey = secretKey
+    
     let endpoint = "https://api.openai.com/v1/engines/text-davinci-002/completions"
     
     let prompt = "Is this text message a scam? Give a short description why or why not. User Input: \(userInput)"
@@ -102,6 +105,7 @@ struct Analysis: View {
                             .cornerRadius(30)
                             .font(.custom("Arial-Bold", size: 30))
                     }
+                    
                     Spacer()
                     NavigationLink(destination: Help()) {
                 
@@ -112,6 +116,7 @@ struct Analysis: View {
                             .cornerRadius(30)
                             .font(.custom("Arial-Bold", size: 30))
                     }
+                    
                     
                     
                 }
